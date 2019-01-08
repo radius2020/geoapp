@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NYC restaurant reviews with search feature.">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="stylesheet" type="text/css" href="css/responsive_project2.css">
+  <link rel="manifest" href="manifest.json" />
+  <title>Restaurant Info</title>
+</head>
+
+<body class="inside">
+  <header>
+    <nav>
+      <h1><a href="/">Restaurant Reviews</a></h1>
+    </nav>
+    <nav aria-label="Breadcrumb" role="navigation">
+      <ul id="breadcrumb" >
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="maincontent">
+    <section id="map-container">
+      <div id="map" role="application" aria-label="Map of New York City, with pin on chosen restaurant."></div>
+    </section>
+
+    <section id="restaurant-container">
+      <h2 id="restaurant-name"></h2>
+      <img id="restaurant-img">
+      <p id="restaurant-cuisine"></p>
+      <p id="restaurant-address"></p>
+      <table id="restaurant-hours"></table>
+    </section>
+
+    <form id="reviews-form" role=form>
+      <label for="review-name">
+        <span>Your Name</span>
+        <input type=text id="review-name" name="name" required />
+      </label>
+      <label for="review-text">
+        <span>Your Review</span>
+        <textarea id="review-text" name="comments" required></textarea>
+      </label>
+
+      <label for="review-rating">
+        <span>Your Rating</span>
+        <input id="review-rating" name="rating" type="number" list="review-list" step="1" min="1" max="5" required/>
+        <datalist id="review-list" role="listbox">
+          <option value="1"/>
+          <option value="2"/>
+          <option value="3"/>
+          <option value="4"/>
+          <option value="5"/>
+        </datalist>
+      </label>
+
+      <button role=button id="submit-button">Submit</button>
+    </form>
+
+    <section id="reviews-container">
+      <h2 id="reviews-label">Reviews</h2>
+      <ul id="reviews-list"></ul>
+    </section>
+  </main>
+
+  <footer id="footer"><span>
+    Copyright (c) 2017 <a class="footer_link" href="/"><strong>Restaurant Reviews</strong></a></span><span> All Rights Reserved.</span>
+  </footer>
+
+  <script charset="utf-8" src="js/register_sw.js"></script>
+  <script type="application/javascript" charset="utf-8" src="js/restaurantInitMap.js"></script>
+  <script type="module" src="js/restaurant_info.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initMap"></script>
+
+
+</body>
+
+</html>

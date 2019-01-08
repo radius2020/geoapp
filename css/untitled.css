@@ -1,0 +1,153 @@
+/************* 480px/30em ***********/
+/* For devices bigger than a mobile phone device */
+@media only screen and (min-width: 30em) {
+	body .inside {
+		width: auto;
+		height: 1024;
+	}
+
+	.inside header {
+		height: 100px;
+	}
+
+
+	
+	#neighborhoods-select {
+		width: 30%;
+	}
+
+	#cuisines-select {
+		width: 30%;
+	}
+
+	.filter-options h2 {
+		padding-top: 3px;
+		padding-left: 15px;
+		width: 20%;
+	}
+
+	#restaurants-list {
+		display: grid;
+		grid-template-columns: 45% 45%;
+		grid-template-rows: repeat(auto auto);
+	}
+
+	#restaurants-list li {
+		padding-top: 14%;
+		position: relative;
+	}
+
+	.inside #breadcrumb {
+	    padding: 10px 40px 16px;
+	    list-style: none;
+	    background-color: #3397DB;
+	    /*background-color: #eee;*/
+	    font-size: 17px;
+	    margin: 0;
+	    width: calc(100% - 80px);
+	}
+
+	.inside #footer span {
+		display: inline;
+	}
+
+}
+
+/******************** 600px/37.5em ***********/
+/* For devices bigger than a mid-size device (i.e. iPad)  */
+@media screen and (min-width: 37.5px) {
+
+	.inside {
+		width: 100%;
+		height: 1024;
+	}
+
+	.inside header {
+		/*display: block;*/
+		/*width: calc(50%-20px);*/
+		height: 50px;
+	}
+
+	.inside #map-container  {
+	  background: blue none repeat scroll 0 0;
+	  height: 87%;
+	  position: fixed;
+	  right: 0;
+	  /*top: 80px;*/
+	  width: 50%;
+	  padding-top: 50px;
+	}
+
+	.inside #map {
+		height: 100%;
+		position: fixed;
+	  	right: 0;
+		padding-top: 50px;
+	}
+
+/*-----------Home Page-----------------------*/
+
+	#restaurants-list {
+		display: grid;
+		grid-template-columns: 30% 30% 30%;
+		grid-template-rows: repeat(auto, auto);
+
+	}
+	#restaurants-list li {
+		padding-top: 14%;
+		position: relative;
+	}
+
+	/*-----------Restaurant Page------------------*/
+
+	#breadcrumb {
+    padding: 10px 0 16px; 
+    list-style: none;
+    background-color: #eee;
+    font-size: 17px;
+    margin: 0;
+    width: 100%;
+	}
+
+	/* Display list items side by side */
+	#breadcrumb li {
+	    display: inline;
+	}
+
+	/* Add a slash symbol (/) before/behind each list item */
+	#breadcrumb li+li:before {
+	    padding: 8px;
+	    color: black;
+	    content: "/\00a0";
+	}
+
+	/* Add a color to all links inside the list */
+	#breadcrumb li a {
+	    color: #0275d8;
+	    text-decoration: none;
+	}
+
+	/* Add a color on mouse-over */
+	#breadcrumb li a:hover {
+	    color: #01447e;
+	    text-decoration: underline;
+	}
+
+	.inside h2 #restaurant-name {
+		padding 5px 3px 5px;
+	}
+
+	.inside #restaurant-img {
+	  width: 100%;
+	  display: block;
+	  margin: none;
+	}
+
+
+	.inside #restaurant-container, .inside #reviews-container {
+	  width: 50%;
+	  padding-top: 100px;
+	  border-bottom: 1px solid #d9d9d9;
+	  border-top: 1px solid #fff;
+	}
+} /* END @media screen and (min-width: 37.5px) */
